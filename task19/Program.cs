@@ -6,7 +6,11 @@
 
 Console.WriteLine("Введите пятизначное число N:");
 int N = Convert.ToInt32(Console.ReadLine());
-if ( 10000 < N || N < 99999)
+if ( 999999 < N || N < 10000)
+{
+   Console.WriteLine("Вы ввели не пятизначное число");
+}
+else
 { 
     int digit1 = N/10000;
     int digit2 = (N/1000)%10;
@@ -18,12 +22,8 @@ if ( 10000 < N || N < 99999)
     {
        Console.WriteLine("Да");
     }
-    else if (N!=res)
+    else 
     {
        Console.WriteLine("Нет"); 
     }
-}
-else
-{
-     Console.WriteLine("Вdедено не пятизначное число"); 
 }
